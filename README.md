@@ -12,7 +12,7 @@ MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的�
 </dependency>
 ```
 ### CRUD
-与mybatis比较普通的crud不用再编写sql也不用在编写mapper.xml或者使用注解，只需继承 com.baomidou.mybatisplus.core.mapper.BaseMapper 就可以使用普通的crud了
+与mybatis比较，普通的crud不用再编写sql也不用在编写mapper.xml或者使用注解，只需继承 com.baomidou.mybatisplus.core.mapper.BaseMapper 就可以使用普通的crud了
 ```java
 @Component
 @Mapper
@@ -31,6 +31,7 @@ public interface EmpDao extends BaseMapper<EmpBean> {
 * 乐观锁插件: OptimisticLockerInnerInterceptor
 * sql性能规范插件: IllegalSQLInnerInterceptor
 * 防止全表更新与删除插件: BlockAttackInnerInterceptor
+* 非法sql拦截器插件: IllegalSQLInnerInterceptor
 #### 分页插件
 第一步：添加拦截器
 ```java
