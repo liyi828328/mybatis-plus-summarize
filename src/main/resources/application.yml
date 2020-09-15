@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/mybatis_summarize?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&allowMultiQueries=true&useSSL=false
+      username: root
+      password: root123
+      initial-size: 1
+      min-idle: 1
+      max-active: 10
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      test-on-return: false
+      test-while-idle: true
+      test-on-borrow: false
+      validation-query: SELECT 1
+
+#mybatis:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
